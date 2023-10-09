@@ -33,7 +33,7 @@ const SectionNav = styled.div`
   .sec-ul {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin: 50px 0px 20px 0px;
     padding: 20px;
     border-radius: 6px;
     gap: 50px;
