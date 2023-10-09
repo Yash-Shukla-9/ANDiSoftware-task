@@ -28,6 +28,6 @@ const Head = styled.div`
 `;
 
 const Container = styled.div`
-  background-color: #52616b;
+  /* background-color: #52616b; */
   color: white;
 `;

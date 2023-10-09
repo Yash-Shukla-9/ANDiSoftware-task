@@ -3,7 +3,6 @@ import styled from "styled-components";
 const OurService = ({ name }) => {
   return (
     <ServiceHead>
-      <div className="line"></div>
       <h2 className="heading">
         <div className="redline"></div>
         {name}

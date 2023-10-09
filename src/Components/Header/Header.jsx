@@ -67,6 +67,10 @@ const ButtonContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+
+  @media (min-width: 768px) {
+    justify-content: flex-end;
+  }
 `;
 
 const ContactInfo = styled.div`

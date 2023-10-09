@@ -53,7 +53,8 @@ const ClientContainer = styled.div`
   align-items: center;
   gap: 20px;
   padding: 20px;
-  background-color: #f0f0f0;
+  margin-top: 50px;
+  background-color: #f8f0f0;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
@@ -65,7 +66,7 @@ const ClientContainer = styled.div`
 const ImageGrid = styled.div`
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 150px;
   margin: 20px 0;
 
   @media (max-width: 768px) {
@@ -79,9 +80,11 @@ const ImageBox = styled.div`
   img {
     width: 120px;
     height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
+    object-fit: contain;
     border: 3px solid #fff;
+
+    border-radius: 10px;
+
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
     &:hover {
