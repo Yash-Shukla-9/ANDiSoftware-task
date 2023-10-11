@@ -10,6 +10,8 @@ import {
 } from "react-icons/fa";
 import { TiSocialTumbler } from "react-icons/ti";
 import { BsPinterest } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import CopyRight from "../CopyRight/CopyRight";
 
 const Footer = () => {
   const mapURL =
@@ -49,20 +51,43 @@ const Footer = () => {
         <FollowUsSection>
           <h2>Follow Us</h2>
           <SocialIcons>
-            <FaFacebookF className="social-icon" />
-            <FaInstagram className="social-icon" />
-            <FaLinkedinIn className="social-icon" />
-            <FaYoutube className="social-icon" />
-            <BsPinterest className="social-icon" />
-            <FaReddit className="social-icon" />
-            <TiSocialTumbler className="social-icon" />
-            <FaFlickr className="social-icon" />
+            <Link to="https://www.facebook.com/people/Andi-Software-Solutions/100065172963303/">
+              <FaFacebookF className="social-icon" />
+            </Link>
+
+            <Link to="https://www.instagram.com/andisoftwaresolutions5/?hl=en">
+              <FaInstagram className="social-icon" />
+            </Link>
+
+            <Link to=" https://www.linkedin.com/company/andisoftwaresolutions/about/">
+              <FaLinkedinIn className="social-icon" />
+            </Link>
+            <Link to="https://www.youtube.com/channel/UC0mfGwSDteVVWqmggE3MtYQ">
+              <FaYoutube className="social-icon" />
+            </Link>
+
+            <Link to="https://in.pinterest.com/andisoftwaresolutions/">
+              <BsPinterest className="social-icon" />
+            </Link>
+
+            <Link to="https://www.reddit.com/user/ANDIsoftsol/">
+              <FaReddit className="social-icon" />
+            </Link>
+            <Link to="https://www.tumblr.com/explore/today">
+              <TiSocialTumbler className="social-icon" />
+            </Link>
+
+            <Link to="https://www.flickr.com/people/andi_software_solutions/">
+              <FaFlickr className="social-icon" />
+            </Link>
           </SocialIcons>
         </FollowUsSection>
       </ContactForm>
       <MapContainer>
         <GoogleMap mapUrl={mapURL} />
       </MapContainer>
+
+      <CopyRight />
     </FooterContainer>
   );
 };
@@ -143,7 +168,7 @@ const SocialIcons = styled.div`
 
   .social-icon {
     font-size: 24px;
-    color: #007bff;
+    color: #41ea35;
     cursor: pointer;
 
     &:hover {

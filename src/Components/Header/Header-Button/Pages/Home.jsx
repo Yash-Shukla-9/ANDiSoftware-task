@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import OurService from "../Header Head Our service/OurService";
 import AboutData from "./Data/About";
+// import Aboutus from "../../../AboutUs/Aboutus";
 
 const Home = () => {
   return (
@@ -19,6 +20,8 @@ const Home = () => {
           );
         })}
       </Aboutt>
+
+      {/* <Aboutus /> */}
     </Homee>
   );
 };

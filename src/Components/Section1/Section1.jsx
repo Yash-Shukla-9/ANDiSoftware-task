@@ -23,10 +23,6 @@ const Section1 = () => {
 
   return (
     <div>
-      {/* <MobileMenuIcon onClick={toggleMobileMenu}>
-        <CiMenuFries size={28} />
-      </MobileMenuIcon> */}
-
       <SectionNav>
         <MobileMenuIcon onClick={toggleMobileMenu}>
           <TfiMenu className="icon" />
@@ -56,7 +52,7 @@ const SectionNav = styled.div`
     margin: 20px 0;
     padding: 20px;
     border-radius: 6px;
-    gap: 10px;
+    gap: 30px;
     background-color: #f2f8fe;
     transition: max-height 0.5s ease;
     overflow: hidden;
@@ -74,6 +70,10 @@ const SectionNav = styled.div`
     & > li {
       font-size: 24px;
       list-style: none;
+      transition: background-color 0.3s;
+      &:hover {
+        color: rgb(0, 133, 255);
+      }
 
       & > a {
         text-decoration: none;
