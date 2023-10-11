@@ -31,8 +31,8 @@ const Header = () => {
           <RiWhatsappFill className="icon" />
         </IconWrapper>
         <PhoneNumber>
-          <div>+91-9999999999</div>
-          <div>+91-889999999</div>
+          <div>+91-7015574125</div>
+          <div>+91-8810385787</div>
         </PhoneNumber>
       </ContactInfo>
     </HeaderContainer>
@@ -45,13 +45,14 @@ const HeaderContainer = styled.header`
   background-color: #fff;
   padding: 15px 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-  @media (min-width: 768px) {
-    flex-direction: row;
+  @media (max-width: 768px) {
+    flex-direction: column;
     justify-content: space-between;
+    padding: 10px;
     align-items: center;
   }
 `;
@@ -66,10 +67,10 @@ const ButtonContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
 
   @media (min-width: 768px) {
     justify-content: flex-end;
+    gap: 20px;
   }
 `;
 
@@ -86,21 +87,21 @@ const ContactInfo = styled.div`
 `;
 
 const PhoneNumber = styled.span`
-  color: #d80032;
+  color: #2a55e5;
   font-size: 20px;
 `;
 
 const IconWrapper = styled.div`
   background-color: #f0f0f0;
   border-radius: 50%;
-  padding: 10px;
+  padding: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;
 
   .icon {
-    font-size: 25px;
+    font-size: 20px;
     color: green;
   }
 

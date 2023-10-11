@@ -10,7 +10,7 @@ const Button = styled.button`
   border: none;
   margin-top: 10px;
   border-radius: 4px;
-  background-color: #3498db; /* Change to your desired background color */
+  background-color: #276cf2; /* Change to your desired background color */
   color: #fff; /* Change to your desired text color */
   font-size: 16px;
   cursor: pointer;

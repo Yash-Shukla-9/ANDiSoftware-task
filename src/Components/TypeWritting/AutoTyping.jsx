@@ -24,7 +24,7 @@ const Text = styled.div`
   font-size: 24px;
   position: relative;
   font-family: "Arial", sans-serif;
-  color: #0085ff;
+  color: #276cf2;
   padding: 20px;
   /* border: 2px solid #333; */
   border-radius: 8px;
@@ -37,9 +37,9 @@ const Cursor = styled.span`
   top: 50%;
   right: -10px;
   transform: translateY(-50%);
-  width: 10px;
+  width: 5px;
   height: 24px;
-  background-color: #333;
+  background-color: black;
   animation: ${blink} 0.7s infinite;
 `;
 

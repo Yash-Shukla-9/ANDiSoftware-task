@@ -21,4 +21,8 @@ export default OurPartners;
 
 const Partners = styled.div``;
 
-const Container = styled.div``;
+const Container = styled.div`
+  background-color: #ecf9ff;
+  margin-top: 50px;
+  padding: 30px 0;
+`;

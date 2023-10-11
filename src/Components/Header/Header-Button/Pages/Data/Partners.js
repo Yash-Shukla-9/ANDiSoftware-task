@@ -36,7 +36,7 @@ const PartnersData = [
     Image: "https://andisoftwaresolutions.com/p7.png",
     headig: "Unique Software Point",
     location: " Kurukshetra",
-    Website: ":https://uniquesoftwareworld.in",
+    Website: "https://uniquesoftwareworld.in",
   },
 ];
 

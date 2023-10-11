@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ProductData from "./Data/Product.data";
-import ProductCard from "../Product-card/ProductCard";
+import ProductCard from "../../../CardsAll/ProductCard";
 import OurService from "../Header Head Our service/OurService";
 
 const ProductService = () => {

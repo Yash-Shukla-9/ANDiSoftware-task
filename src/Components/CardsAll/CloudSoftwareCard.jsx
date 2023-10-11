@@ -3,23 +3,17 @@ import styled from "styled-components";
 const CloudSoftwareCard = ({ data }) => {
   return (
     <Cloud>
-      <div className="left">
+      <Left>
         <img src={data.image} alt="" />
-      </div>
+      </Left>
 
-      <div className="right">
-        <h2 className="head">{data.heading}</h2>
-        <div className="para1">
-          <p className="text1">{data.text1}</p>
-        </div>
-        <div className="para2">
-          <p className="text2">{data.text2}</p>
-        </div>
+      <Right>
+        <Heading>{data.heading}</Heading>
+        <Para1>{data.text1}</Para1>
+        <Para2>{data.text2}</Para2>
 
-        <div className="price">
-          <p>{data.price}</p>
-        </div>
-      </div>
+        <Price>{data.price}</Price>
+      </Right>
     </Cloud>
   );
 };
@@ -29,39 +23,98 @@ export default CloudSoftwareCard;
 const Cloud = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
 
-  .left {
-    & > img {
-      width: 250px;
+  gap: 40px;
+  background-color: #f5f5f5;
+  margin-top: 30px;
+  width: 1000px;
+  padding: 20px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+`;
+
+const Left = styled.div`
+  /* width: 250px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+`;
+
+const Right = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 15px;
+  text-align: left;
+
+  .head {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .text1 {
+    font-size: 18px;
+  }
+
+  .text2 {
+    font-size: 16px;
+    color: grey;
+  }
+
+  .price {
+    p {
+      font-weight: 600;
+      font-size: 18px;
+      color: #007bff;
     }
   }
 
-  .right {
-    width: 600px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    .head {
-      text-align: center;
-      font-size: 28px;
-    }
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+`;
 
-    .text1 {
-      font-size: 18px;
-    }
+const Heading = styled.h2`
+  font-size: 28px;
+  font-weight: bold;
+  text-align: left;
+  color: #333;
+`;
 
-    .text2 {
-      font-size: 16px;
-      color: grey;
-    }
+const Para1 = styled.p`
+  font-size: 18px;
+  text-align: left;
+  color: #555;
+`;
 
-    .price {
-      & > p {
-        font-weight: 600;
-        font-size: 18px;
-      }
-    }
+const Para2 = styled.p`
+  font-size: 16px;
+  color: grey;
+  text-align: left;
+`;
+
+const Price = styled.div`
+  p {
+    font-weight: 600;
+    font-size: 18px;
+    color: #007bff;
   }
 `;

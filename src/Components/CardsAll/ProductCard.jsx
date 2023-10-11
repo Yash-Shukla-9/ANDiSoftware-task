@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ProductBtn from "./ProductBtn";
+import ProductBtn from "../Header/Header-Button/Product-card/ProductBtn";
 
 const ProductCard = ({ item }) => {
   return (
@@ -32,14 +32,17 @@ const Main = styled.div`
 const Card = styled.div`
   display: flex;
   align-items: center;
+
   gap: 20px;
   text-align: left;
-  background-color: #fff;
+  background-color: #f4f9ff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   overflow: hidden;
   width: 100%;
-  max-width: 600px;
+  height: 280px;
+  max-width: 1100px;
+  padding: 0 30px;
   transition: transform 0.2s;
 
   &:hover {
@@ -48,23 +51,16 @@ const Card = styled.div`
 
   @media (max-width: 768px) {
     flex-direction: column;
+    gap: 10px;
+    height: 100px;
     text-align: center;
-  }
-
-  @media (max-width: 768px) {
-    ${Card} {
-      padding: 10px;
-    }
-
-    ${Right} {
-      text-align: center;
-    }
+    height: auto; /* Adjust the height for mobile screens */
   }
 `;
 
 const Left = styled.div`
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   overflow: hidden;
   border-radius: 10px;
 
@@ -75,9 +71,8 @@ const Left = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
   }
 `;
 
@@ -99,6 +94,10 @@ const Description = styled.p`
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const Button = styled.div`

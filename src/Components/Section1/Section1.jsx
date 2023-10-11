@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { useState } from "react"; // Import useState
-import { CiMenuFries } from "react-icons/ci";
+import { useState } from "react";
+import { TfiMenu } from "react-icons/tfi";
 
 const SecnavData = [
   { label: "Home", to: "/Home" },
@@ -16,53 +16,69 @@ const SecnavData = [
 const Section1 = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  <CiMenuFries />;
   // Toggle mobile menu
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <SectionNav>
-      <MobileMenuIcon onClick={toggleMobileMenu}></MobileMenuIcon>
-      <ul className={`sec-ul ${isMobileMenuOpen ? "open" : ""}`}>
-        {SecnavData.map((item, index) => (
-          <li key={index}>
-            <NavLinkk to={item.to} activeClassName="active" exact>
-              {item.label}
-            </NavLinkk>
-          </li>
-        ))}
-      </ul>
-    </SectionNav>
+    <div>
+      {/* <MobileMenuIcon onClick={toggleMobileMenu}>
+        <CiMenuFries size={28} />
+      </MobileMenuIcon> */}
+
+      <SectionNav>
+        <MobileMenuIcon onClick={toggleMobileMenu}>
+          <TfiMenu className="icon" />
+        </MobileMenuIcon>
+        <ul className={`sec-ul ${isMobileMenuOpen ? "open" : ""}`}>
+          {SecnavData.map((item, index) => (
+            <li key={index}>
+              <NavLink to={item.to} activeClassName="active" exact>
+                {item.label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+      </SectionNav>
+    </div>
   );
 };
 
 export default Section1;
 
 const SectionNav = styled.div`
+  display: flex;
+
   .sec-ul {
     display: flex;
     justify-content: center;
-    margin: 50px 0px 20px 0px;
+    margin: 20px 0;
     padding: 20px;
     border-radius: 6px;
-    gap: 50px;
-    width: 100%;
+    gap: 10px;
     background-color: #f2f8fe;
-    transition: max-height 0.5s ease; /* Add transition for smooth animation */
-    overflow: hidden; /* Hide overflow content */
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+    flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     &.open {
-      max-height: 500px; /* Adjust the maximum height as needed */
+      max-height: 500px;
+      flex-direction: column;
     }
 
     & > li {
-      font-size: 22px;
+      font-size: 24px;
       list-style: none;
 
       & > a {
         text-decoration: none;
+        color: #1e2022;
+        font-weight: bold;
       }
     }
 
@@ -70,21 +86,25 @@ const SectionNav = styled.div`
       color: red;
     }
   }
-`;
 
-const NavLinkk = styled(NavLink)`
-  text-decoration: none;
-  color: #1e2022;
-  font-weight: bold;
+  .sec-ul.open {
+    display: flex;
+  }
 `;
-
 const MobileMenuIcon = styled.div`
-  display: none; /* Hide the icon by default */
+  display: none;
+
+  .icon {
+    font-size: 28px;
+    font-weight: 600;
+  }
 
   @media (max-width: 768px) {
-    display: block; /* Show the icon on mobile devices */
+    display: flex;
+    /* align-items: center; */
     cursor: pointer;
     font-size: 24px;
+
     margin-right: 10px;
   }
 `;

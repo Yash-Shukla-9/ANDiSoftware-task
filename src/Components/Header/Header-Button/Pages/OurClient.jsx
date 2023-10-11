@@ -3,45 +3,46 @@ import OurService from "../Header Head Our service/OurService";
 
 const OurClient = () => {
   return (
-    <ClientContainer>
+    <div>
       <OurService name="Our Clients" />
+      <ClientContainer>
+        <ImageGrid>
+          <ImageBox>
+            <img src="https://andisoftwaresolutions.com/80.jpg" alt="" />
+          </ImageBox>
 
-      <ImageGrid>
-        <ImageBox>
-          <img src="https://andisoftwaresolutions.com/80.jpg" alt="" />
-        </ImageBox>
+          <ImageBox>
+            <img src="https://andisoftwaresolutions.com/79.jpg" alt="" />
+          </ImageBox>
 
-        <ImageBox>
-          <img src="https://andisoftwaresolutions.com/79.jpg" alt="" />
-        </ImageBox>
+          <ImageBox>
+            <img src="https://andisoftwaresolutions.com/78.jpg" alt="" />
+          </ImageBox>
 
-        <ImageBox>
-          <img src="https://andisoftwaresolutions.com/78.jpg" alt="" />
-        </ImageBox>
+          <ImageBox>
+            <img src="https://andisoftwaresolutions.com/91.jpg" alt="" />
+          </ImageBox>
+        </ImageGrid>
 
-        <ImageBox>
-          <img src="https://andisoftwaresolutions.com/91.jpg" alt="" />
-        </ImageBox>
-      </ImageGrid>
+        <ImageGrid>
+          <ImageBox>
+            <img src="https://andisoftwaresolutions.com/87.jpg" alt="" />
+          </ImageBox>
 
-      <ImageGrid>
-        <ImageBox>
-          <img src="https://andisoftwaresolutions.com/87.jpg" alt="" />
-        </ImageBox>
+          <ImageBox>
+            <img src="https://andisoftwaresolutions.com/88.jpg" alt="" />
+          </ImageBox>
 
-        <ImageBox>
-          <img src="https://andisoftwaresolutions.com/88.jpg" alt="" />
-        </ImageBox>
+          <ImageBox>
+            <img src="https://andisoftwaresolutions.com/89.jpg" alt="" />
+          </ImageBox>
 
-        <ImageBox>
-          <img src="https://andisoftwaresolutions.com/89.jpg" alt="" />
-        </ImageBox>
-
-        <ImageBox>
-          <img src="https://andisoftwaresolutions.com/90.jpg" alt="" />
-        </ImageBox>
-      </ImageGrid>
-    </ClientContainer>
+          <ImageBox>
+            <img src="https://andisoftwaresolutions.com/90.jpg" alt="" />
+          </ImageBox>
+        </ImageGrid>
+      </ClientContainer>
+    </div>
   );
 };
 
