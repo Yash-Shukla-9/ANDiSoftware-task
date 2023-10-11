@@ -17,7 +17,6 @@ const App = () => {
       </SectionFlex>
       <Typewriter />
       <ICarousel />
-      <ICarousel />
       <Outlet />
       <Footer />
     </div>
